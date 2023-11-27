@@ -1,0 +1,82 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FoodOrderingAdminDashboard.styles.css" asp-append-version="true" />
+</head>
+<body class="bg-default">
+    <div id="root" style="background:linear-gradient(237.49deg,#eef4fa .63%,#dee6ed 85.49%)">
+        <div></div>
+        <div class="MuiBox-root css-0">
+            <div class="MuiBox-root css-0">
+                <div class="MuiGrid-root MuiGrid-container css-13mpstx">
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-5 css-dd594m">
+                        <img src="~/img/loginpageicon.png" alt="login img" style="height: 50%; width: 70%; border-radius: 50px;" />
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-7 css-td57ah">
+                        <p class="MuiTypography-root MuiTypography-body1 css-18qppd8">Enter your details below</p>
+                        <div class="jss2203 MuiBox-root css-1m3p9o7">
+                            <div class="jss1203 MuiBox-root css-0">
+                                <div class="jss3203 MuiBox-root css-0">
+                                    <h6 class="MuiTypography-root MuiTypography-h6 jss5203 css-1bil0j5">Login to Food Ordering</h6>
+                                </div>
+                            </div>
+                            <div class="jss4203 MuiBox-root css-0">
+                                <form asp-controller="AdminLogin" asp-action="Login" method="post">
+                                    <div class="MuiBox-root css-0">
+                                        <p class="MuiTypography-root MuiTypography-body1 jss6203 css-5vqbp2">Email</p>
+                                        <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary jss9203 css-1k01ise" style="margin-top: -1px;">
+                                            <input id="input-email" name="Email" placeholder="Email" type="email" class="MuiInputBase-input MuiInput-input css-1bj7i46" value="admin@gmail.com">
+                                        </div>
+                                    </div>
+                                    <div class="MuiBox-root css-0">
+                                        <p class="MuiTypography-root MuiTypography-body1 jss6203 css-5vqbp2">Password</p>
+                                        <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary jss9203 css-1k01ise" style="margin-top: -1px;">
+                                            <input id="input-password" name="Password" placeholder="Password" type="text" class="MuiInputBase-input MuiInput-input css-1bj7i46" value="123123"></div>
+                                    </div>
+                                    <div class="MuiBox-root css-325ibr">
+                                        <div class="MuiFormGroup-root css-1h7anqn">
+                                            <label class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-vl41wx">
+                                                <span class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary css-13qx86b">
+                                                    <input name="KeepLoggedIn" class="PrivateSwitchBase-input css-1m9pwf3" type="checkbox" data-indeterminate="false" checked="">
+                                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CheckBoxIcon">
+                                                        <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                                                    </svg>
+                                                    <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                                </span>
+                                                <span class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-5vqbp2">Remember me</span>
+                                            </label>
+                                        </div>
+                                        <a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-11obfmw" href="/#/auth/reset">Forgot your password?</a>
+                                    </div>
+                                    <div class="MuiBox-root css-0">
+                                        <button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium jss13 css-grj8dm" tabindex="0" type="submit">
+                                            Login
+                                            <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                        </button>
+                                        @if (ViewData["ValidateMessage"] != null)
+                                        {
+                                            <br />
+                                            <br />
+                                            <label>@ViewData["ValidateMessage"]</label>
+                                        }
+                                    </div>
+                                </form>
+                                <div class="MuiBox-root css-1yuhvjn"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
