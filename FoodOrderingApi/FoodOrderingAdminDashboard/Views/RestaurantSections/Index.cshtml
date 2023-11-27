@@ -1,0 +1,320 @@
+﻿@model FoodOrderingAdminDashboard.Models.RestaurantSectionViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="MuiContainer-root MuiContainer-maxWidthLg jss16 css-1qsxih2">
+    <div class="MuiGrid-root MuiGrid-container css-1d3bbye">
+        <div class="MuiGrid-root MuiGrid-item css-4nyfv0">
+            <div class="jss100 MuiBox-root css-0">
+                <div class="jss124 MuiBox-root css-0">
+                    <div class="jss126 MuiBox-root css-0">
+                        <h6 class="MuiTypography-root MuiTypography-h6 jss128 css-1bil0j5">Add Section</h6>
+                    </div>
+                    <div class="MuiBox-root css-152myms">
+                        <label>Available</label>
+                        <input type="checkbox" name="Status" class="staus-input" id="restaurantSectionStatus" />
+                        @*<span class="MuiSwitch-root MuiSwitch-sizeMedium css-ecvcn9">
+                            <span class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked css-96ule7" style="color: black;">                                
+                                <input type="checkbox" name="slider" class="staus-input" id="sliderSwitch" />
+                                <span class="MuiSwitch-thumb css-19gndve"></span><span class="MuiTouchRipple-root css-w0pj6f"></span>
+                            </span><span class="MuiSwitch-track css-1ju1kxc"></span>
+                        </span>*@
+                    </div>
+                </div>
+                <div class="jss16 jss48 MuiBox-root css-0" lg="12">
+                    <form id="restaurantSectionForm">
+                        <div class="jss17 MuiBox-root css-0">
+                            <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary jss18 css-1k01ise">
+                                <input id="input-name" name="Name" placeholder="Section Name" type="text" class="MuiInputBase-input MuiInput-input css-1bj7i46" value="">
+                            </div>
+                        </div>                        
+                        <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 jss41 css-m43vlk">
+                            @foreach (var restaurants in Model.RestaurantsData)
+                            {
+                                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-iol86l">
+                                    <label class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-vl41wx">
+                                        <span class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-root MuiCheckbox-colorPrimary css-13qx86b">
+                                            <input id="wp-comment-cookies-consent" class="restaurants-checkbox" name="Restaurants-checkbox" type="checkbox" value="@restaurants.RestaurantName">
+                                            @*<input class="PrivateSwitchBase-input css-1m9pwf3" type="checkbox" data-indeterminate="false" value="64634f572e05958d543ba306">
+                                            <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CheckBoxOutlineBlankIcon">
+                                                <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path>
+                                            </svg>*@
+                                            <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                        </span>
+                                        <span class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-5vqbp2">@restaurants.RestaurantName</span>
+                                    </label>
+                                </div>
+                            }
+                        </div>
+                        <div class="MuiBox-root css-0">
+                            <button id="saveRestaurantSection"class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium jss21 css-grj8dm" tabindex="0" type="button">
+                                SAVE
+                                <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                            </button>
+                        </div>
+                    </form>
+                    @{
+                        var SuccessMessage = TempData["successMessage"]?.ToString();
+                    }
+                    <div class="MuiBox-root css-1yuhvjn">@SuccessMessage</div>
+                </div>
+            </div>
+        </div>
+        <div class="MuiGrid-root MuiGrid-item css-1jaksy">
+            <img src="~/img/icons\restaurantsection.svg" />
+        </div>
+    </div>
+    <div class="MuiContainer-root MuiContainer-maxWidthLg css-1qsxih2" classnname="jss16">
+        <div class="sc-fmSAUk exMnZG rdt_TableHeader" role="heading" aria-level="1">
+            <div class="sc-fGFwAa khejKv">
+                <h4 style="font-weight: bold; margin-top: 15px;">Restaurant Sections</h4>
+            </div>
+            <div class="sc-blLsxD koXrXC"></div>
+            <div class="sc-hAtEyd eoNOiB">
+                <div class="sc-brKeYL jxdWww"></div>
+                <div class="sc-ktEKTO bAPOXo"></div>
+            </div>
+        </div>
+        <header class="sc-ieZDjg iWJPSX">
+            <div class="jss43 MuiBox-root css-0">
+                <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button">
+                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1t20kk0" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="RefreshIcon">
+                        <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"></path>
+                    </svg>
+                    <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                </button>
+                <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-adornedEnd css-my0gr0">
+                    <input id="basic-input" placeholder="Search" type="text" class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1bj7i46" value="">
+                    <div class="MuiInputAdornment-root MuiInputAdornment-positionEnd css-1ldksmw">
+                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SearchIcon">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="sc-hIqOWS eHqDnR">
+            <div class="sc-kgKVFY bjPfTP">
+                <div class="sc-beqWaB iPedkf rdt_Table" role="table">
+                    <div class="sc-gueYoa choFig rdt_TableHead" role="rowgroup">
+                        <div class="sc-dmqHEX kESOuL rdt_TableHeadRow" role="row">
+                            <div class="sc-hLseeU sc-eDDNvR sc-irTswW ejOucI huUFBA iLbjdE rdt_TableCol vendor_Srno">
+                                <div id="column-name" role="columnheader" tabindex="0" class="sc-csCMJt iGmFHr rdt_TableCol_Sortable">
+                                    <div>Sr. No.</div>
+                                    <span class="sc-kFuwaP czbDoG">▲</span>
+                                </div>
+                            </div>
+                            <div class="sc-hLseeU sc-eDDNvR sc-irTswW ejOucI huUFBA iLbjdE rdt_TableCol vendor_email">
+                                <div id="column-email" role="columnheader" tabindex="0" class="sc-csCMJt iGmFHr rdt_TableCol_Sortable">
+                                    <div>Name</div>
+                                    <span class="sc-kFuwaP czbDoG">▲</span>
+                                </div>
+                            </div>
+                            <div class="sc-hLseeU sc-eDDNvR sc-irTswW ejOucI huUFBA iLbjdE rdt_TableCol vendor_email">
+                                <div id="column-email" role="columnheader" tabindex="0" class="sc-csCMJt iGmFHr rdt_TableCol_Sortable">
+                                    <div>Status</div>
+                                    <span class="sc-kFuwaP czbDoG">▲</span>
+                                </div>
+                            </div>
+                            <div class="sc-hLseeU sc-eDDNvR sc-irTswW ejOucI huUFBA iLbjdE rdt_TableCol vendor_email">
+                                <div id="column-email" role="columnheader" tabindex="0" class="sc-csCMJt iGmFHr rdt_TableCol_Sortable">
+                                    <div>Restaurants</div>
+                                    <span class="sc-kFuwaP czbDoG">▲</span>
+                                </div>
+                            </div>
+                            <div class="sc-hLseeU sc-eDDNvR sc-irTswW ejOucI huUFBA iLbjdE rdt_TableCol vendor_action">
+                                <div id="column-phone" role="columnheader" tabindex="0" class="sc-csCMJt iGmFHr rdt_TableCol_Sortable">
+                                    <div>Action</div>
+                                    <span class="sc-kFuwaP czbDoG">▲</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*<p>
+                    <a asp-action="Create">Create New</a>
+                    </p>*@
+                    <div offset="250px" class="sc-dKfzgJ gupTcW rdt_TableBody" role="rowgroup">
+                        @{
+                            int count = 1; // Initialize the counter variable
+                        }
+                        @foreach (var item in Model.RestaurantSection)
+                        {
+                            <div id="row-0" role="row" class="sc-jsMahE cOWmgG rdt_TableRow">
+                                <div class="sc-hLseeU sc-gLDzan UVHqw gNRcrj rdt_TableCell vendor_Srno">
+                                    <div>@count</div>
+                                </div>
+                                <div id="cell-jpPGvtamY-undefined" role="gridcell" data-tag="allowRowEvents" class="sc-hLseeU sc-eDDNvR sc-jTrPJq hZkQgf huUFBA gmufnB rdt_TableCell section-name">
+                                    <div data-tag="allowRowEvents">@Html.DisplayFor(modelItem => item.Name)</div>
+                                </div>
+                                <div id="cell-jpPGvtamY-undefined" role="gridcell" data-tag="allowRowEvents" class="sc-hLseeU sc-eDDNvR sc-jTrPJq hZkQgf huUFBA gmufnB rdt_TableCell section-available">
+                                    <div data-tag="allowRowEvents">@Html.DisplayFor(modelItem => item.Status)</div>
+                                </div>
+                                <div id="cell-jpPGvtamY-undefined" role="gridcell" data-tag="allowRowEvents" class="sc-hLseeU sc-eDDNvR sc-jTrPJq hZkQgf huUFBA gmufnB rdt_TableCell section-restaurant">
+                                    @{
+                                        string restaurantsString = item.Restaurants;
+                                        string[] restaurantArray = restaurantsString
+                                        .Replace("[", "")
+                                        .Replace("]", "")
+                                        .Split(new[] { '"' }, StringSplitOptions.RemoveEmptyEntries);
+                                        List<string> restaurantList = new List<string>();
+                                        foreach (string restaurant in restaurantArray)
+                                        {
+                                            string trimmedRestaurant = restaurant.Trim();
+                                            restaurantList.Add(trimmedRestaurant);
+                                        }
+                                        foreach (string restaurant in restaurantList)
+                                        {
+                                            <div data-tag="allowRowEvents">@restaurant</div>
+                                        }
+                                    }
+                                </div>
+                                <div id="cell-2dg6Aoufvw-undefined" role="gridcell" data-tag="allowRowEvents" class="sc-hLseeU sc-eDDNvR sc-jTrPJq hZkQgf huUFBA fwAyQy rdt_TableCell section-action">
+                                    <div class="section-action">
+                                        <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1yxmbwk" tabindex="0" type="button" aria-label="more" id="long-button" aria-haspopup="true">
+                                            <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1k33q06" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MoreVertIcon">
+                                                <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+                                            </svg>
+                                            <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                        </button>
+                                        <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-v7lqox"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            count++;
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <nav class="sc-lnAgIa gOyacv rdt_Pagination">
+                <span class="sc-eACynP sc-kMrHXl jiTDyT eGcJkK">Rows per page:</span>
+                <div class="sc-cyRfQX kfTAbl">
+                    <select aria-label="Rows per page:" class="sc-ivnCJf JuKJx">
+                        <option value="10" selected="">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                    </select>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z"></path>
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                </div>
+                <span class="sc-eACynP sc-bZPPFW jiTDyT ipBkJZ">1-10 of 109</span>
+                <div class="sc-gjTGSA cVcbVU">
+                    <button id="pagination-first-page" type="button" aria-label="First Page" aria-disabled="true" disabled="" class="sc-iKGpAt ehekCK"></button>
+                    <button id="pagination-previous-page" type="button" aria-label="Previous Page" aria-disabled="true" disabled="" class="sc-iKGpAt ehekCK">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                        </svg>
+                    </button>
+                    <button id="pagination-next-page" type="button" aria-label="Next Page" aria-disabled="false" class="sc-iKGpAt ehekCK">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                        </svg>
+                    </button>
+                    <button id="pagination-last-page" type="button" aria-label="Last Page" aria-disabled="false" class="sc-iKGpAt ehekCK"></button>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+@*<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RestaurantSectionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Restaurants)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RestaurantSectionId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Restaurants)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>*@
+<script>
+    $(document).ready(function () {
+        // Attach a click event handler to the "SAVE" button
+        $("#saveRestaurantSection").on("click", function () {
+            // Define the data to send
+            var selectedRestaurant = $('.restaurants-checkbox:checked').map(function () {
+                return this.value;
+            }).get();
+            var restaurants = JSON.stringify(selectedRestaurant);
+            //$('.restaurants-checkbox:checked').each(function () {
+            //    restaurantArr = $(this).val();
+            //});
+            var dataToSend = {
+                Name: $("#input-name").val(),
+                Status: $('#restaurantSectionStatus').prop('checked') ? "Available" : "Not Available",
+                Restaurants: restaurants
+            };
+            console.log(dataToSend);
+            // Make an AJAX POST request to the server
+            $.ajax({
+                url: '/RestaurantSections/Create', // Replace with the actual URL where you want to send the data
+                method: "POST",
+                data: dataToSend,
+                //contentType: "application/json", // Set content type to JSON
+                success: function (response) {
+                    // Handle the server's response here
+                    console.log("Response from server:", response);
+                    alert("Restaurant Sections created successfully");
+                    location.reload(true);
+                },
+                error: function (error) {
+                    // Handle any errors that occur during the AJAX request
+                    console.error("Error:", error);
+                    alert("Restaurant Sections not created!");
+                }
+            });
+        });
+    });
+</script>
+

@@ -1,0 +1,187 @@
+﻿@model FoodOrderingAdminDashboard.Models.RestaurantViewModel
+
+@{
+    ViewData["Title"] = "RestaurantProfileUpdate";
+    Layout = "~/Views/Shared/_RestaurantLayout.cshtml";
+}
+<div class="MuiContainer-root MuiContainer-maxWidthLg jss16 css-1qsxih2">
+    <div class="jss57 MuiBox-root css-0">
+        <div class="jss56 MuiBox-root css-0" style="align-items: start;">
+            <div class="jss59 MuiBox-root css-0">
+                <h6 class="MuiTypography-root MuiTypography-h6 jss61 css-1bil0j5">Update Profile</h6>
+            </div>
+        </div>
+        <div class="jss62 MuiBox-root css-0">
+            <form>
+                <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42">
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-rpybyc">
+                        <div class="MuiBox-root css-0">
+                            <p class="MuiTypography-root MuiTypography-body1 jss63 css-5vqbp2">Restaurant's user name</p>
+                            <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary jss18 css-1k01ise" style="margin-top: -1px;"><input id="input-type-username" name="username" placeholder="Restaurant's username" type="text" class="MuiInputBase-input MuiInput-input css-1bj7i46" value="adnan"></div>
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-rpybyc">
+                        <div class="MuiBox-root css-0">
+                            <p class="MuiTypography-root MuiTypography-body1 jss63 css-5vqbp2">Password</p>
+                            <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary jss18 css-1k01ise" style="margin-top: -1px;"><input id="input-type-password" name="password" placeholder="Restaurant's password" type="text" class="MuiInputBase-input MuiInput-input css-1bj7i46" value="12345"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42">
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-rpybyc">
+                        <div class="MuiBox-root css-0">
+                            <p class="MuiTypography-root MuiTypography-body1 jss63 css-5vqbp2">Name</p>
+                            <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary jss18 css-1k01ise" style="margin-top: -1px;"><input id="input-type-name" name="name" placeholder="Restaurant's name" type="text" class="MuiInputBase-input MuiInput-input css-1bj7i46" value="AA Foods"></div>
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-rpybyc">
+                        <div class="MuiBox-root css-0">
+                            <p class="MuiTypography-root MuiTypography-body1 jss63 css-5vqbp2">Address</p>
+                            <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary jss18 css-1k01ise" style="margin-top: -1px;"><input id="input-type-address" name="address" placeholder="Restaurant's address" type="text" class="MuiInputBase-input MuiInput-input css-1bj7i46" value="isb"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42">
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-rpybyc">
+                        <div class="MuiBox-root css-0">
+                            <p class="MuiTypography-root MuiTypography-body1 jss63 css-5vqbp2">Delivery Time</p>
+                            <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary jss18 css-1k01ise" style="margin-top: -1px;"><input id="input-type-delivery-time" name="deliveryTime" placeholder="Delivery Time" type="number" class="MuiInputBase-input MuiInput-input css-1bj7i46" value="20"></div>
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-rpybyc">
+                        <div class="MuiBox-root css-0">
+                            <p class="MuiTypography-root MuiTypography-body1 jss63 css-5vqbp2">Minimum Order</p>
+                            <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary jss18 css-1k01ise" style="margin-top: -1px;"><input id="input-type-minimum-order" name="minimumOrder" placeholder="Minimum order" type="number" class="MuiInputBase-input MuiInput-input css-1bj7i46" value="0"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42">
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-rpybyc">
+                        <div class="MuiBox-root css-0">
+                            <p class="MuiTypography-root MuiTypography-body1 jss63 css-5vqbp2">Sales tax</p>
+                            <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary jss18 css-1k01ise" style="margin-top: -1px;"><input id="input-type-sales-tax" name="salesTax" placeholder="Sales tax" type="number" class="MuiInputBase-input MuiInput-input css-1bj7i46" value="10"></div>
+                        </div>
+                    </div>
+                    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-rpybyc">
+                        <div class="MuiBox-root css-0">
+                            <p class="MuiTypography-root MuiTypography-body1 jss63 css-5vqbp2">Order Prefix</p>
+                            <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary jss18 css-1k01ise" style="margin-top: -1px;"><input id="input-type-order_id_prefix" name="prefix" placeholder="Order Prefix" type="text" class="MuiInputBase-input MuiInput-input css-1bj7i46" value="PJEGD"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jss16 MuiBox-root css-178yklu" style="align-items: center;"><img class="jss64" alt="..." src="https://res.cloudinary.com/do1ia4vzf/image/upload/v1695879987/food/iytxdis5hbeycwvzxnyi.jpg"><label for="file-upload" class="jss66">Upload an image</label><input class="jss65" id="file-upload" type="file"></div>
+                <div class="MuiBox-root css-0"><button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium jss21 css-grj8dm" tabindex="0" type="button">SAVE<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
+            </form>
+            <div class="MuiBox-root css-1yuhvjn"></div>
+        </div>
+    </div>
+</div>
+<h1>RestaurantProfileUpdate</h1>
+
+<h4>RestaurantViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="RestaurantProfileUpdate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VendorId" class="control-label"></label>
+                <input asp-for="VendorId" class="form-control" />
+                <span asp-validation-for="VendorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RestaurantId" class="control-label"></label>
+                <input asp-for="RestaurantId" class="form-control" />
+                <span asp-validation-for="RestaurantId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RestaurantName" class="control-label"></label>
+                <input asp-for="RestaurantName" class="form-control" />
+                <span asp-validation-for="RestaurantName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailId" class="control-label"></label>
+                <input asp-for="EmailId" class="form-control" />
+                <span asp-validation-for="EmailId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostalCode" class="control-label"></label>
+                <input asp-for="PostalCode" class="form-control" />
+                <span asp-validation-for="PostalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeliveryTime" class="control-label"></label>
+                <input asp-for="DeliveryTime" class="form-control" />
+                <span asp-validation-for="DeliveryTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MinimumOrder" class="control-label"></label>
+                <input asp-for="MinimumOrder" class="form-control" />
+                <span asp-validation-for="MinimumOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderPrifix" class="control-label"></label>
+                <input asp-for="OrderPrifix" class="form-control" />
+                <span asp-validation-for="OrderPrifix" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesTax" class="control-label"></label>
+                <input asp-for="SalesTax" class="form-control" />
+                <span asp-validation-for="SalesTax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Available" class="control-label"></label>
+                <input asp-for="Available" class="form-control" />
+                <span asp-validation-for="Available" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedDate" class="control-label"></label>
+                <input asp-for="CreatedDate" class="form-control" />
+                <span asp-validation-for="CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorEmail" class="control-label"></label>
+                <input asp-for="VendorEmail" class="form-control" />
+                <span asp-validation-for="VendorEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
